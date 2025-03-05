@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1b36b;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            background:#9e6613;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, textarea, select {
+            width: 90%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-row {
+            display: flex;
+            gap: 10px;
+        }
+        .form-row .form-group {
+            flex: 1;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color:#61390a;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 19px;
+            font-family:bold;
+        }
+        button:hover {
+            background-color: #833a09;
+        }
+        .error {
+            color: red;
+            font-size: 12px;
+        }
+        @media (max-width: 600px) {
+            .form-row {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="help">How can we help you today? <span style="color:black;">*</span></label>
+                <select id="help" name="help">
+                    <option value="">- Select -</option>
+                    <option value="support">Support</option>
+                    
+                    <option value="feedback">Feedback</option>
+                </select>
+                <div class="error" id="helpError"></div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="firstName">First Name <span style="color:black;">*</span></label>
+                    <input type="text" id="firstName" name="firstName">
+                    <div class="error" id="firstNameError"></div>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name <span style="color:black;">*</span></label>
+                    <input type="text" id="lastName" name="lastName">
+                    <div class="error" id="lastNameError"></div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="email">Email Address <span style="color:black;">*</span></label>
+                    <input type="email" id="email" name="email">
+                    <div class="error" id="emailError"></div>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number <span style="color:black;">*</span></label>
+                    <input type="text" id="phone" name="phone">
+                    <div class="error" id="phoneError"></div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="company">Timings<span style="color:black;">*</span></label>
+                    <input type="datetime-local" id="company" name="company">
+                    <div class="error" id="companyError"></div>
+                </div>
+                <div class="form-group">
+                    <label for="jobTitle">Medical Consultations</label>
+                    <input type="text" id="jobTitle" name="jobTitle">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="comments">Comments</label>
+                <textarea id="comments" name="comments" rows="4"></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            let valid = true;
+
+            function showError(id, message) {
+                document.getElementById(id).innerText = message;
+            }
+
+            function clearError(id) {
+                document.getElementById(id).innerText = "";
+            }
+
+            let requiredFields = ["help", "firstName", "lastName", "email", "phone", "company"];
+            requiredFields.forEach(field => {
+                let value = document.getElementById(field).value.trim();
+                if (value === "") {
+                    showError(field + "Error", "This field is required.");
+                    valid = false;
+                } else {
+                    clearError(field + "Error");
+                }
+            });
+
+            let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            let email = document.getElementById("email").value.trim();
+            if (!emailPattern.test(email)) {
+                showError("emailError", "Enter a valid email.");
+                valid = false;
+            } else {
+                clearError("emailError");
+            }
+
+            if (valid) {
+                alert("Message Sent Successfully!");
+                document.getElementById("contactForm").reset();
+            }
+        });
+    </script>
+</body>
+</html>

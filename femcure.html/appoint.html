@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women's Health Care</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background-image: url("https://www.shutterstock.com/image-vector/minimalist-banner-background-pastel-colorful-600nw-2470687695.jpg"); background-size: 100% 100%; ; color: #e0e0e0; }
+        header { background: linear-gradient(135deg, #222831, #393e46); color: white; text-align: center; padding: 10px; font-size: 28px; font-weight: bold; display: flex; align-items: center; justify-content: center; gap: 15px; }
+        header img { height: 240px; border-radius: 100%; }
+        nav { display: flex; justify-content: center; background-color: #222831; padding: 15px; }
+        nav a { text-decoration: none; color: #f05454; margin: 15px; font-size: 18px; font-weight: bold; transition: 0.3s; }
+        nav a:hover { color: #ffcccb; }
+        section { padding: 60px 10%; text-align: center; }
+        .container { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; }
+        .box { background: #1e1e1e; padding: 20px; width: 300px; box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1); border-radius: 10px; transition: 0.3s; }
+        .box:hover { transform: translateY(-5px); }
+        .box img { width: 100%; height: auto; border-radius: 10px; }
+        footer { text-align: center; padding: 20px; background: #222831; color: white; margin-top: 20px; font-size: 16px; }
+        button { padding: 10px 20px; background: #f05454; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; transition: 0.3s; }
+        button:hover { background: #ff7878; }
+        .form-container { background: #836b72; padding: 20px; width: 50%; margin: 20px auto; border-radius: 10px; box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1); }
+        .form-container h2 { margin-bottom: 15px; }
+        .form-container input, .form-container select, .form-container textarea { width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: none; background: #ffffff; color: white; }
+        .form-container button { width: 100%; }
+    </style>
+</head>
+<body>
+    <form method="post">
+    <header>
+        <img src="logo.jpg" alt="Women's Health Logo">
+        <h1>Women's Health Care</h1>
+    </header>
+  
+    <section id="appointment">
+        <div class="form-container">
+            <h2>Book an Appointment</h2>
+            <form>
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+                
+                <label for="date">Preferred Date</label>
+                <input type="date" id="date" name="date" required>
+                
+                <label for="doctor">Select Doctor</label>
+                <select id="doctor" name="doctor">
+                    <option value="gynecology">Gynecologist</option>
+                    <option value="mental-health">Mental Health Specialist</option>
+                    <option value="nutritionist">Nutritionist</option>
+                </select>
+                
+                <label for="message">Additional Message</label>
+                <textarea id="message" name="message" rows="4"></textarea>
+                
+                <button type="submit" name="sb">Book Appointment</button>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 Women's Health Care. All Rights Reserved.</p>
+    </footer>
+</form>
+<!-- <?php
+
+$con=mysqli_connect('localhost', 'root', '', 'htm');
+
+if(isset($_POST['sb']))
+
+{
+
+  $name=$_POST['nm'];
+  $lname=$_POST['lm'];
+  $query="INSERT INTO user(firstname,lastname) VALUES ('$name', '$lname')";
+  $run=mysqli_query($con,$query);
+}
+
+?> -->
+</body>
+</html>
