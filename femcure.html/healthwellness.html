@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIF Animation</title>
+    <style>
+        .timid {
+            width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+        p{
+            color:black;
+            font-size:100px;
+            text-transform: capitalize;
+        }
+        body {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background:linear-gradient(skyblue,darkblue,violet);
+            overflow: hidden;
+        }
+        .gif-container {
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
+            justify-content: center;
+        }
+        .gif-container img {
+            width: 300px;
+            opacity: 0;
+            transform: translateX(-100%);
+            animation: slideIn 1s forwards;
+            border-radius: 6%;
+        }
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        .gif-container img:nth-child(1) { animation-delay: 0.5s; }
+        .gif-container img:nth-child(2) { animation-delay: 1.5s; }
+        .gif-container img:nth-child(3) { animation-delay: 2.5s; }
+        .gif-container img:nth-child(4) { animation-delay: 3.5s; }
+        p {
+            font-size: 16px;
+            text-align: center;
+            padding: 20px;
+            line-height: 1.5;
+        }
+        button
+        {
+            color:black;
+            border-color:crimson;
+            background-color:crimson;
+            width:150px;
+            height:6vh;
+            font-size:20px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="gif-container">
+        <img src="https://cdn.pixabay.com/animation/2025/01/27/15/06/15-06-35-236_512.gif" alt="GIF 1">
+        <img src="https://assets.menshealth.co.uk/main/assets/WH_StrongBodyMind_LOGO.gif?mtime=1539776986" alt="GIF 2">
+        <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExM2gzYW5qM2c0M2lyaDN6cm90MWxldzhvY3BvN21xYW94ejlrcWlpayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/9AqFnNpbc29XDYCtCx/giphy.gif" alt="GIF 3">
+        <img src="https://i.makeagif.com/media/7-14-2017/NpV6mj.gif" alt="GIF 4">
+    </div>
+    <div class="timid">
+        <p>The menstrual cycle is a natural process in a woman's reproductive system that prepares the body for pregnancy each month. It typically lasts between 21 to 35 days, with an average cycle of 28 days. The cycle consists of four main phases: the menstrual phase, the follicular phase, ovulation, and the luteal phase.
+
+            The menstrual phase begins with the shedding of the uterine lining, resulting in menstruation (periods) that lasts around 3 to 7 days. The follicular phase follows, during which the ovaries produce follicles, and one matures into an egg. Ovulation occurs around the middle of the cycle, when the ovary releases a mature egg into the fallopian tube, making it available for fertilization. If fertilization does not occur, the luteal phase leads to a decline in hormones like estrogen and progesterone, causing the uterine lining to break down and start a new cycle.
+            
+            Hormonal fluctuations during the menstrual cycle can cause physical and emotional changes, such as mood swings, bloating, cramps, and fatigue. Maintaining a healthy lifestyle, staying hydrated, and managing stress can help regulate the cycle and ease discomfort. Understanding the menstrual cycle is crucial for reproductive health, fertility, and overall well-being.</p>
+    </div>
+    <a href="home.html"><center><button>HOME</button></center></a>
+</body>
+</html>

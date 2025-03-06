@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIF Animation</title>
+    <style>
+        .timid {
+            width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+        p{
+            color:black;
+            font-size:100px;
+            text-transform: capitalize;
+        }
+        body {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background:linear-gradient(pink,purple,skyblue);
+            overflow: hidden;
+        }
+        .gif-container {
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
+            justify-content: center;
+        }
+        .gif-container img {
+            width: 300px;
+            opacity: 0;
+            transform: translateX(-100%);
+            animation: slideIn 1s forwards;
+            border-radius: 6%;
+        }
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        .gif-container img:nth-child(1) { animation-delay: 0.5s; }
+        .gif-container img:nth-child(2) { animation-delay: 1.5s; }
+        .gif-container img:nth-child(3) { animation-delay: 2.5s; }
+        .gif-container img:nth-child(4) { animation-delay: 3.5s; }
+        p {
+            font-size: 16px;
+            text-align: center;
+            padding: 20px;
+            line-height: 1.5;
+        }
+        button
+        {
+            color:black;
+            border-color:crimson;
+            background-color:crimson;
+            width:150px;
+            height:6vh;
+            font-size:20px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="gif-container">
+        <img src="https://cdn.pixabay.com/animation/2025/01/27/15/06/15-06-35-236_512.gif" alt="GIF 1">
+        <img src="https://assets.menshealth.co.uk/main/assets/WH_StrongBodyMind_LOGO.gif?mtime=1539776986" alt="GIF 2">
+        <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExM2gzYW5qM2c0M2lyaDN6cm90MWxldzhvY3BvN21xYW94ejlrcWlpayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/9AqFnNpbc29XDYCtCx/giphy.gif" alt="GIF 3">
+        <img src="https://i.makeagif.com/media/7-14-2017/NpV6mj.gif" alt="GIF 4">
+    </div>
+    <div class="timid">
+        <p>Gynecology is a specialized branch of medicine that focuses on the health and well-being of the female reproductive system. It encompasses the diagnosis, treatment, and prevention of a wide range of conditions related to the uterus, ovaries, fallopian tubes, and vagina. Gynecologists address various health concerns, including menstrual disorders, hormonal imbalances, infertility, polycystic ovary syndrome (PCOS), endometriosis, and menopause. They also play a crucial role in detecting and treating reproductive infections and cancers affecting the female reproductive organs.
+
+            Routine gynecological care includes essential screenings such as Pap smears, pelvic exams, ultrasounds, and breast examinations to detect potential health issues at an early stage. In addition to preventive care, gynecologists provide guidance on contraception, family planning, and sexual health. This field closely overlaps with obstetrics, which deals with pregnancy, childbirth, and postpartum care.
+            
+            Gynecology is vital for maintaining overall female health, ensuring reproductive wellness, and improving the quality of life for women at various stages of their lives. Regular check-ups and early intervention can help prevent serious complications and promote long-term well-being.</p>
+    </div>
+    <a href="home.html"><center><button>HOME</button></center></a>
+</body>
+</html>

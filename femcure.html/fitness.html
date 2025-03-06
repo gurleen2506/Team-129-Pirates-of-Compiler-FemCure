@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIF Animation</title>
+    <style>
+        .timid {
+            width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+        p{
+            color:black;
+            font-size:100px;
+            text-transform: capitalize;
+        }
+        body {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background:linear-gradient(pink,orange,violet);
+            overflow: hidden;
+        }
+        .gif-container {
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
+            justify-content: center;
+        }
+        .gif-container img {
+            width: 300px;
+            opacity: 0;
+            transform: translateX(-100%);
+            animation: slideIn 1s forwards;
+            border-radius: 6%;
+        }
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        .gif-container img:nth-child(1) { animation-delay: 0.5s; }
+        .gif-container img:nth-child(2) { animation-delay: 1.5s; }
+        .gif-container img:nth-child(3) { animation-delay: 2.5s; }
+        .gif-container img:nth-child(4) { animation-delay: 3.5s; }
+        p {
+            font-size: 16px;
+            text-align: center;
+            padding: 20px;
+            line-height: 1.5;
+        }
+        button
+        {
+            color:black;
+            border-color:crimson;
+            background-color:crimson;
+            width:150px;
+            height:6vh;
+            font-size:20px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="gif-container">
+        <img src="https://cdn.pixabay.com/animation/2025/01/27/15/06/15-06-35-236_512.gif" alt="GIF 1">
+        <img src="https://assets.menshealth.co.uk/main/assets/WH_StrongBodyMind_LOGO.gif?mtime=1539776986" alt="GIF 2">
+        <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExM2gzYW5qM2c0M2lyaDN6cm90MWxldzhvY3BvN21xYW94ejlrcWlpayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/9AqFnNpbc29XDYCtCx/giphy.gif" alt="GIF 3">
+        <img src="https://i.makeagif.com/media/7-14-2017/NpV6mj.gif" alt="GIF 4">
+    </div>
+    <div class="timid">
+        <p>Fitness and wellness play a crucial role in a woman's overall health, helping to maintain physical strength, mental well-being, and disease prevention. Regular physical activity improves cardiovascular health, boosts metabolism, enhances flexibility, and strengthens muscles and bones. Engaging in exercises like walking, jogging, yoga, strength training, and aerobics helps in weight management, reduces the risk of chronic diseases such as diabetes and hypertension, and improves posture and mobility.
+
+            Wellness extends beyond physical fitness and includes mental, emotional, and social well-being. Managing stress through meditation, mindfulness, and relaxation techniques is essential for mental health. Proper sleep, a balanced diet, and hydration also contribute to overall wellness. Building positive relationships, engaging in hobbies, and taking time for self-care enhance emotional resilience and happiness.
+            
+            A holistic approach to fitness and wellness enables women to lead energetic, confident, and fulfilling lives. Prioritizing regular exercise, healthy eating, and mental well-being fosters long-term health benefits, improving both physical vitality and emotional balance.</p> </div>
+           <a href="home.html"><center><button>HOME</button></center></a>
+</body>
+</html>
